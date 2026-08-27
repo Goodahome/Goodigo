@@ -1,0 +1,72 @@
+:root {
+  --el-color-primary: var(--color-accent);
+  --el-color-primary-light-3: #60a5fa;
+  --el-color-primary-light-5: #93c5fd;
+  --el-color-primary-light-7: #bfdbfe;
+  --el-color-primary-light-8: #dbeafe;
+  --el-color-primary-light-9: #eff6ff;
+  --el-color-primary-dark-2: var(--color-accent-hover);
+  --el-border-radius-base: var(--radius-input);
+  --el-border-radius-small: var(--radius-tag);
+  --el-font-family: var(--font-sans);
+}
+
+.el-button {
+  border-radius: var(--radius-button);
+  min-height: 40px;
+}
+
+.el-button--primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.el-button--primary:hover,
+.el-button--primary:focus {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  color: #ffffff;
+}
+
+.el-button--primary.is-plain {
+  background-color: var(--el-color-primary-light-9);
+  border-color: var(--el-color-primary-light-5);
+  color: var(--color-accent);
+}
+
+.el-button--primary.is-plain:hover,
+.el-button--primary.is-plain:focus {
+  background-color: var(--el-color-primary-light-8);
+  border-color: var(--color-accent);
+  color: var(--color-accent-hover);
+}
+
+.el-card {
+  border-radius: var(--radius-card);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.el-input__wrapper,
+.el-textarea__inner {
+  border-radius: var(--radius-input);
+}
+
+.el-table {
+  border-radius: var(--radius-card);
+}
+
+@media (max-width: 375px) {
+  .auth-form__submit,
+  .practice__bar .el-button,
+  .practice__toggle,
+  .manage__card-actions .el-button {
+    min-height: 44px;
+    width: 100%;
+  }
+
+  .practice__empty :deep(.el-button) {
+    width: 100%;
+  }
+}
